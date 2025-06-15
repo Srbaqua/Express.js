@@ -17,24 +17,6 @@
     const server = http.createServer(app);
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     const PORT = 3002;
     server.listen(PORT,()=>{
         console.log(`express server is running on http://localhost:${PORT}`);
