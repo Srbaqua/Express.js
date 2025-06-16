@@ -1,5 +1,6 @@
 const PORT = 3000;
 
+const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -14,9 +15,7 @@ app.use(hostRouter);
 app.use(userRouter);
 
 app.use((req,res,next)=>{
-    res.status(404).send(`<h1>Oops you landed on wrong page. </h1> 
-        <h2>Sorryyyyyyyyyyyyyy </h2>
-    `)
+    res.sendFile(path.join(__dirname,'views','404.html'));
 })
 
 
